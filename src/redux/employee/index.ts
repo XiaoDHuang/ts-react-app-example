@@ -68,12 +68,12 @@ export function createEmployee(param: CreateRequest, callback: () => void) {
     }
 }
 
-export function deleteEmployee(params: DeleteRequest) {
+export function deleteEmployee(param: DeleteRequest) {
     return (dispatch: Dispatch) => {
-        post(DELETE_EMPLOYEE, params).then((res) => {
+        post(DELETE_EMPLOYEE_URL, param).then((res) => {
             dispatch({
                 type: DELETE_EMPLOYEE,
-                id: params.id
+                payload: param.id
             })
         })
     }
