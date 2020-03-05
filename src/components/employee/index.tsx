@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import getColumns from './colums';
 import QueryForm from './QueryForm';
 import InfoModal from './InfoModal';
+import { DOWNLOAD_EMPLOYEE_URL } from '../../constants/urls'
 
 import './index.css';
 
@@ -76,7 +77,7 @@ class Employee extends Component<Props, State> {
         });
     }
     handleDownload() {
-
+        window.open(DOWNLOAD_EMPLOYEE_URL)
     }
     render() {
         const {
